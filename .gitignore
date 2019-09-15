@@ -28,6 +28,7 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
 
 # Gradle cache directory
 .gradle/
@@ -67,3 +68,5 @@ crashlytics-build.properties
 
 
 # End of https://www.gitignore.io/api/unity
+
+\.idea/
