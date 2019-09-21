@@ -12,6 +12,8 @@ public class ItemSlot : NetworkBehaviour, IDropHandler
     private HumanInventoryUI humanInventoryUi;
     public InventoryUi inventoryUi;
 
+    public Item item;
+
     private void Start()
     {
         if (!inventoryUi) inventoryUi = GetComponentInParent<InventoryUi>();

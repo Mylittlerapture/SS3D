@@ -31,7 +31,9 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             transform.SetParent(ReturnParent);
-            LastSlot.uiItem.Item.visual.GetComponentInParent<HumanInventory>().RemoveItem(LastSlot);
+            LastSlot.physicalItemLocation.gameObject.GetComponentInParent<HumanInventory>().RemoveItem(LastSlot);
+
+            //item.visual.GetComponentInParent<HumanInventory>().RemoveItem(LastSlot);
             return;
         }
 

@@ -10,26 +10,28 @@ public class Item : NetworkBehaviour
     public SlotTypes compatibleSlots = SlotTypes.LeftHand | SlotTypes.RightHand | SlotTypes.Storage;
 
     [SerializeField]
-    private VisualObject visualObjectPrefab;
+    private GameObject visualObjectPrefab;
 
     [SyncVar]
     public bool Held;
 
-    public VisualObject visual;
-
-    public void CreateVisual(Transform target)
+    public GameObject visual;
+    
+    public void CreateVisual(Transform target, GameObject player)
     {
-        if (!visual) visual = Instantiate(visualObjectPrefab, target);
+        if (!visual) visual = Instantiate(visualObjectPrefab);
         visual.name = "visual - " + name;
-        visual.Initialize(GetComponentInChildren<MeshFilter>().mesh, GetComponentInChildren<MeshRenderer>().materials);
+
+        if (isServer) NetworkServer.Spawn(visual.gameObject);
+        //else
+        //    NetworkServer.SpawnWithClientAuthority(visual.gameObject, player);
     }
 
-    public void MoveVisual(GameObject slotObject)
+    public void MoveVisual(ItemSlot slot)
     {
-        ItemSlot slot = slotObject.GetComponent<ItemSlot>();
-        visual.transform.SetParent(slot.physicalItemLocation);
-        visual.transform.localPosition = Vector3.zero;
-        visual.transform.localRotation = Quaternion.identity;
+        slot.item.transform.localPosition = slot.physicalItemLocation.position;
+        slot.item.transform.localRotation = slot.physicalItemLocation.rotation;
+        slot.item.transform.localScale = Vector3.one;
     }
 
     [ClientRpc]
@@ -37,9 +39,9 @@ public class Item : NetworkBehaviour
     {
         ShowOriginal();
 
-        transform.position = visual.transform.position;
-        transform.rotation = visual.transform.rotation;
-        visual.transform.SetParent(null);
+        //transform.position = visual.transform.position;
+        //transform.rotation = visual.transform.rotation;
+        //visual.transform.SetParent(null);
 
         Destroy(visual.gameObject);
     }

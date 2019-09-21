@@ -14,7 +14,7 @@ public class HumanInventoryUI : InventoryUi
     public void Initialize(HumanInventory inv, HumanAttachmentPoints attachmentPoints)
     {
         Inventory = inv;
-
+        
         SlotSetup(humanSlots.slotLeftHand, attachmentPoints.LeftHand.transform);
         SlotSetup(humanSlots.slotRightHand, attachmentPoints.RightHand.transform);
 
@@ -37,7 +37,7 @@ public class HumanInventoryUI : InventoryUi
 
     private void SlotSetup(ItemSlot slot, Transform attachmentPoint)
     {
-        NetworkServer.Spawn(slot.gameObject);
+        //if (isServer) NetworkServer.Spawn(slot.gameObject);
         slot.physicalItemLocation = attachmentPoint;
         humanSlots.SlotsList.Add(slot);
     }

@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serverOnly: 0
-  localPlayerAuthority: 0
+  localPlayerAuthority: 1
   m_AssetId: 
-  m_SceneId: 3573847893
+  m_SceneId: 802965292
 --- !u!114 &6717756415899413891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +109,4 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 16384
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}

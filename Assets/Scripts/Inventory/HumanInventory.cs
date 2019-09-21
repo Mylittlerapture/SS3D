@@ -55,6 +55,13 @@ public class HumanInventory : Inventory
                 if (item != null) AddItem(item);
             }
         }
+
+        
+        ItemSlot rightHand = inventoryUI.GetSlots().Find(s => s.slotType == SlotTypes.RightHand);
+        ItemSlot leftHand = inventoryUI.GetSlots().Find(s => s.slotType == SlotTypes.LeftHand);
+
+        if (rightHand.item) rightHand.item.MoveVisual(rightHand);
+        if (leftHand.item) leftHand.item.MoveVisual(leftHand);
     }
 
     public ItemSlot GetActiveHandSlot()
@@ -97,9 +104,15 @@ public class HumanInventory : Inventory
             ? owner.GetComponent<HumanInventory>().inventoryUI.GetSlots().Find(s => s.slotType == SlotTypes.LeftHand)
             : owner.GetComponent<HumanInventory>().inventoryUI.GetSlots().Find(s => s.slotType == SlotTypes.RightHand);
 
-        item.CreateVisual(selectedHand.physicalItemLocation);
-        item.MoveVisual(selectedHand.gameObject);
-        item.HideOriginal();
+        item.GetComponent<Rigidbody>().detectCollisions = false;
+        item.GetComponent<Rigidbody>().isKinematic = true;
+        //Mirror.Examples.Basic.Player player = selectedHand.physicalItemLocation.gameObject.GetComponentInParent<Mirror.Examples.Basic.Player>();
+        //Debug.Log(player);
+        //item.CreateVisual(selectedHand.physicalItemLocation, player.gameObject);
+        //item.MoveVisual(selectedHand);
+        //item.HideOriginal();
+
+        selectedHand.item = item;
     }
 
     private void AddItem(Item item)
@@ -135,6 +148,11 @@ public class HumanInventory : Inventory
         {
             CmdRemoveItem(slot.uiItem.Item.gameObject);
             inventoryUI.ClearSlotUiItem(slot);
+
+            slot.item.GetComponent<Rigidbody>().detectCollisions = true;
+            slot.item.GetComponent<Rigidbody>().isKinematic = false;
+
+            slot.item = null;
         }
     }
 

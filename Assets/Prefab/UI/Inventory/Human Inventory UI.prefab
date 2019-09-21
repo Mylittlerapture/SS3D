@@ -301,6 +301,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 4096
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &4383625739638485633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,8 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 2925889084
 --- !u!1 &5727570336470225222
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +620,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 1
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &2850736897287290662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,8 +635,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 3266267898
 --- !u!1 &5727570336634964237
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +941,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 64
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &1621783478178782526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,8 +956,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 1688565450
 --- !u!1 &5727570336769961564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1409,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 16384
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &3022613293412493379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,8 +1424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 2839830316
 --- !u!1 &5727570337045348979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1577,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 32768
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &2258995919496531283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1587,8 +1592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 1314745668
 --- !u!1 &5727570337057610253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1745,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 32
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &2820616079010041659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,8 +1760,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 3404172275
 --- !u!1 &5727570337152170535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,6 +1850,7 @@ GameObject:
   - component: {fileID: 5727570337167516740}
   - component: {fileID: 5727570337167516731}
   - component: {fileID: 2164020338074798218}
+  - component: {fileID: 6243711912402312288}
   m_Layer: 5
   m_Name: Human Inventory UI
   m_TagString: Untagged
@@ -1946,6 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6690bfbdf67b7cf4d9828150d45cbf07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncInterval: 0.1
   Inventory: {fileID: 0}
   humanSlots:
     slotLeftHand: {fileID: 4314286201925930352}
@@ -1970,6 +1978,22 @@ MonoBehaviour:
     SlotsList: []
   uiItemPrefab: {fileID: 236411278976419200, guid: b218006fe61b1054997470d7b6e28be0,
     type: 3}
+--- !u!114 &6243711912402312288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727570337167516730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serverOnly: 0
+  localPlayerAuthority: 0
+  m_AssetId: 
+  m_SceneId: 3154401634
 --- !u!1 &5727570337277288390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2145,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 1024
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &8143473778920826599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2135,8 +2160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 4110000949
 --- !u!1 &5727570337360814680
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2313,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 16
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &2932518225081783616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2302,8 +2328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 845705941
 --- !u!1 &5727570337461845122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2456,6 +2482,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 2
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &1510399637513559322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2470,8 +2497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 4137871026
 --- !u!1 &5727570337641136726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2725,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 512
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &1616756457123693903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2712,8 +2740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 856228465
 --- !u!1 &5727570337700206128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +2968,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 8192
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &1996334135560785682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2954,8 +2983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 1291302160
 --- !u!1 &5727570337736405585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3136,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 128
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &1183440863799249516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,8 +3151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 1789707412
 --- !u!1 &5727570337751581809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3274,6 +3304,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 2048
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &8692953739139406220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3288,8 +3319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 2066462972
 --- !u!1 &5727570337760138168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,6 +3472,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 256
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &7139244173042226896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3455,8 +3487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 3210159560
 --- !u!1 &5727570337775656653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,6 +3715,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 8
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &8498783793697494266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3697,8 +3730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 122034024
 --- !u!1 &5727570337849531497
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,6 +4581,7 @@ MonoBehaviour:
   uiItem: {fileID: 0}
   slotType: 4
   physicalItemLocation: {fileID: 0}
+  inventoryUi: {fileID: 0}
 --- !u!114 &8153200715523890084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4562,8 +4596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   localPlayerAuthority: 1
-  m_AssetId: f86d70d91f583f44e95c5a20aea0fa31
-  m_SceneId: 0
+  m_AssetId: 
+  m_SceneId: 3857376483
 --- !u!1 &5727570338557895368
 GameObject:
   m_ObjectHideFlags: 0

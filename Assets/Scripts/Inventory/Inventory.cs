@@ -26,7 +26,7 @@ public abstract class Inventory : NetworkBehaviour
         ItemSlot originSlot = ui.GetSlots().First(s => s.slotType == origin);
         ItemSlot targetSlot = ui.GetSlots().First(s => s.slotType == target && s.uiItem == null);
 
-        item.MoveVisual(targetSlot.gameObject);
+        item.MoveVisual(targetSlot);
         targetSlot.uiItem = originSlot.uiItem;
         originSlot.uiItem = null;
     }
